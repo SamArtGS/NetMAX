@@ -24,7 +24,7 @@ prompt creando vista ARCHIVO_PROGRAMA
 create or replace view archivo_programa as
   select num_archivo, programa_id, 
     get_remote_archivo_f1_by_id(num_archivo, programa_id) as archivo, tamanio
-  from archivo_programa_f1;
+  from archivo_programa_f1
   union all
   select num_archivo, programa_id, 
     get_remote_archivo_f2_by_id(num_archivo, programa_id) as archivo, tamanio
