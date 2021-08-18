@@ -35,9 +35,9 @@
 | HISTORICO_STATUS_PROGRAMA_SGS_S2|$\sigma($ HISTORICO_STATUS_PROGRAMA_SGS_S1 $)$ | 
 | ARCHIVO_PROGRAMA_F1_JCC_S2 | $\sigma_{tamanio > 10}($ ARCHIVO_PROGRAMA $)$ | 
 | ARCHIVO_PROGRAMA_F2_SGS_S1 | $\sigma_{tamanio <= 10}($ ARCHIVO_PROGRAMA $)$ | 
-| PLAYLIST_F1_SGS_S1 | PLAYLIST $⋉_{usuario\_id} ($ USUARIO_F2_SGS_S2 $)$ | 
+| PLAYLIST_F1_SGS_S2 | PLAYLIST $⋉_{usuario\_id} ($ USUARIO_F2_SGS_S2 $)$ | 
 | PLAYLIST_F2_JCC_S1 | PLAYLIST $⋉_{usuario\_id} ($ USUARIO_F3_JCC_S1 $)$ | 
-| PLAYLIST_F3_SGS_S2 | PLAYLIST $⋉_{usuario\_id} ($ USUARIO_F4_SGS_S1 $)$ | 
+| PLAYLIST_F3_SGS_S1 | PLAYLIST $⋉_{usuario\_id} ($ USUARIO_F4_SGS_S1 $)$ | 
 | PLAYLIST_F4_JCC_S2 | PLAYLIST $⋉_{usuario\_id} ($ USUARIO_F5_JCC_S2 $)$ | 
 | STATUS_PROGRAMA | Copia Manual |
 | TIPO_CUENTA_R_JCC_S1 | Tabla Replicada |
