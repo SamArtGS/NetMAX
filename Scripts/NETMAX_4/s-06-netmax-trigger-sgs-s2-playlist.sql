@@ -104,9 +104,6 @@ begin
       end if;
 
     end case;
-  exception
-   WHEN others THEN
-   null;
   end;
 /
 show errors

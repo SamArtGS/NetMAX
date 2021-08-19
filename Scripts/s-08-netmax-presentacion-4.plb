@@ -406,7 +406,7 @@ Prompt ======================================
 exec sp_valida_insercion_blob_main
 
 Prompt ======================================
-Prompt Validando registros con datos ivalidos
+Prompt Validando registros con datos invalidos
 Prompt ======================================
 exec sp_valida_reg_invalido_main
 
