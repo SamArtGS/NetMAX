@@ -48,11 +48,11 @@ begin
       );
 
     when deleting then
-        if :new.tamanio > 10 then
+        if :old.tamanio > 10 then
         
         delete from archivo_programa_f1 where num_archivo = :old.num_archivo and programa_id = :old.programa_id;
 
-      elsif :new.tamanio <= 10 then
+      elsif :old.tamanio <= 10 then
         
         delete from archivo_programa_f2 where num_archivo = :old.num_archivo and programa_id = :old.programa_id;
 

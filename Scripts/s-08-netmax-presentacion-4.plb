@@ -1,5 +1,3 @@
-
-Prompt seleccionar la PDB para validar
 connect netmax_bdd/N3tm4x4dm1n123@jccbdd_s1
 Prompt  Indicar la Tecnica para fragmentar playlist:
 accept p_fragmento char prompt  '(P) empleando PROGRAMA, (U) empleando USUARIO: '
@@ -408,7 +406,7 @@ Prompt ======================================
 exec sp_valida_insercion_blob_main
 
 Prompt ======================================
-Prompt Validando registros con datos ivalidos
+Prompt Validando registros con datos invalidos
 Prompt ======================================
 exec sp_valida_reg_invalido_main
 
