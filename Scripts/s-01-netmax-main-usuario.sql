@@ -8,22 +8,22 @@ prompt Inciando creacion/eliminacion de usuarios.
 prompt =====================================
 prompt Creando usuario en netmax_s1
 connect admin/JorgeBDD12345@jccbdd_s1
-@COMMON\s-01-netmax-usuario.sql
+@COMMON/s-01-netmax-usuario.sql
 
 -- NETMAX_2
 prompt =====================================
 prompt Creando usuario en netmax_s2
 connect admin/JorgeBDD12345@jccbdd_s2
-@COMMON\s-01-netmax-usuario.sql
+@COMMON/s-01-netmax-usuario.sql
 
 -- NETMAX_3
 prompt =====================================
 prompt Creando usuario en netmax_s3
 connect admin/Minecraft+12345@sgsbdd_s1
-@COMMON\s-01-netmax-usuario.sql
+@COMMON/s-01-netmax-usuario.sql
 
 -- NETMAX_4
 prompt =====================================
 prompt Creando usuario en netmax_s4
 connect admin/Minecraft+12345@sgsbdd_s2
-@COMMON\s-01-netmax-usuario.sql
+@COMMON/s-01-netmax-usuario.sql
