@@ -12,21 +12,21 @@ begin
     when inserting then
       if :new.tamanio > 10 then
         
-        insert into archivo_programa_f1(num_archivo,programa_id,archivo,tamanio)
+        insert into ti_archivo_programa_1(num_archivo,programa_id,archivo,tamanio)
         values(:new.num_archivo, :new.programa_id, :new.archivo, :new.tamanio);
 
-      elsif :new.tamanio <= 10 then
-        
-        insert into ti_archivo_programa_2(num_archivo,programa_id,archivo,tamanio)
-        values(:new.num_archivo, :new.programa_id, :new.archivo, :new.tamanio);
-
-        insert into archivo_programa_f2
-        select * from ti_archivo_programa_2
+        insert into archivo_programa_f1
+        select * from ti_archivo_programa_1
         where num_archivo = :new.num_archivo
         and programa_id = :new.programa_id;
 
-        delete from ti_archivo_programa_2
+        delete from ti_archivo_programa_1
         where programa_id = :new.programa_id;
+
+      elsif :new.tamanio <= 10 then
+        
+        insert into archivo_programa_f2(num_archivo,programa_id,archivo,tamanio)
+        values(:new.num_archivo, :new.programa_id, :new.archivo, :new.tamanio);
 
       else
         raise_application_error(-20010,

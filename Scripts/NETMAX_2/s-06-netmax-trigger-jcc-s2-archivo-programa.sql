@@ -11,13 +11,13 @@ begin
   case
     when inserting then
       if :new.tamanio > 10 then
-        
+
         insert into archivo_programa_f1(num_archivo,programa_id,archivo,tamanio)
         values(:new.num_archivo, :new.programa_id, :new.archivo, :new.tamanio);
 
       elsif :new.tamanio <= 10 then
-        
-        insert into ti_archivo_programa_2(num_archivo,programa_id,archivo,tamanio)
+      
+      insert into ti_archivo_programa_2(num_archivo,programa_id,archivo,tamanio)
         values(:new.num_archivo, :new.programa_id, :new.archivo, :new.tamanio);
 
         insert into archivo_programa_f2
