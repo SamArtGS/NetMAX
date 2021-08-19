@@ -43,11 +43,6 @@ create or replace synonym playlist_f2 for playlist_f2_jcc_s1@netmax_s1;
 create or replace synonym playlist_f3 for playlist_f3_sgs_s1@netmax_s3;
 create or replace synonym playlist_f4 for playlist_f4_jcc_s2;
 
--- STATUS PROGRAMA
-create or replace synonym status_programa_r1 for status_programa_jcc_s1@netmax_s1;
-create or replace synonym status_programa_r2 for status_programa_jcc_s2;
-create or replace synonym status_programa_r3 for status_programa_sgs_s1@netmax_s3;
-create or replace synonym status_programa_r4 for status_programa_sgs_s2@netmax_s4;
 
 -- TIPO_CUENTA
 create or replace synonym tipo_cuenta_r1 for tipo_cuenta_r_jcc_s1@netmax_s1;

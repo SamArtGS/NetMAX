@@ -94,12 +94,6 @@ create or replace view playlist as
 prompt Probando la vista PLAYLIST
 select count(*) from playlist;
 
-prompt Creando la vista STATUS_PROGRAMA
--- STATUS_PROGRAMA
-create or replace view status_programa as
-  select status_programa_id, clave, descripcion
-  from status_programa_r1
-;
 prompt Probando la STATUS_PROGRAMA
 select count(*) from status_programa;
 
