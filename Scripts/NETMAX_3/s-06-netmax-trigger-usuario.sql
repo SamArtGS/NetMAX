@@ -15,6 +15,10 @@ begin
       ap_materno,fecha_ingreso, fecha_cuenta_fin, vigente, tipo_cuenta_id)
       values(:new.usuario_id, :new.email, :new.nombre, :new.ap_paterno,
       :new.ap_materno, :new.fecha_ingreso, :new.fecha_cuenta_fin, :new.vigente, :new.tipo_cuenta_id);
+      
+      -- INSERCIÓN DE PASSWORD Y TARJETA EN NODO 1
+        insert into usuario_f1(usuario_id,num_tarjeta,password)
+        values(:new.usuario_id, :new.num_tarjeta, :new.password);
 
       elsif :new.vigente = '1' then
         if :new.tipo_cuenta_id = '1' then
