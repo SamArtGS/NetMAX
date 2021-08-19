@@ -6,7 +6,7 @@
 prompt ===================================== 
 prompt Creando triggers para netmax_1
 prompt ===================================== 
-connect netmax_bdd/N3tm4x4dm1n123@netmax_1
+connect netmax_bdd/N3tm4x4dm1n123@jccbdd_s1
 
 @NETMAX_1/s-06-netmax-trigger-usuario.sql
 @NETMAX_1/s-06-netmax-trigger-programa.sql 
@@ -22,7 +22,7 @@ connect netmax_bdd/N3tm4x4dm1n123@netmax_1
 prompt ===================================== 
 prompt Creando triggers para netmax_2
 prompt ===================================== 
-connect netmax_bdd/N3tm4x4dm1n123@netmax_2
+connect netmax_bdd/N3tm4x4dm1n123@jccbdd_s2
 
 @NETMAX_2/s-06-netmax-trigger-usuario.sql 
 @NETMAX_2/s-06-netmax-trigger-programa.sql 
@@ -39,7 +39,7 @@ connect netmax_bdd/N3tm4x4dm1n123@netmax_2
 prompt ===================================== 
 prompt Creando triggers para netmax_3
 prompt ===================================== 
-connect netmax_bdd/N3tm4x4dm1n123@netmax_3
+connect netmax_bdd/N3tm4x4dm1n123@sgsbdd_s1
 
 @NETMAX_3/s-06-netmax-trigger-usuario.sql 
 @NETMAX_3/s-06-netmax-trigger-programa.sql 
@@ -55,7 +55,7 @@ connect netmax_bdd/N3tm4x4dm1n123@netmax_3
 prompt ===================================== 
 prompt Creando triggers para netmax_4
 prompt ===================================== 
-connect netmax_bdd/N3tm4x4dm1n123@netmax_4
+connect netmax_bdd/N3tm4x4dm1n123@sgsbdd_s2
 
 @NETMAX_4/s-06-netmax-trigger-usuario.sql 
 @NETMAX_4/s-06-netmax-trigger-programa.sql 
