@@ -100,3 +100,5 @@ select
   (select count(*) from tipo_serie_r3) as tipo_serie_r3,
   (select count(*) from tipo_serie_r4) as tipo_serie_r4
 from dual;
+
+prompt listo!

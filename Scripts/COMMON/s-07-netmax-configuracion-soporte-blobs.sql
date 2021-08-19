@@ -97,8 +97,11 @@ end;
 show errors;
 
 -- Comprobación de funcionamiento
-prompt Comprobación de funcionamiento
+prompt Comprobacion de funcionamiento
 select dbms_lob.getlength(fx_carga_blob(
   p_directory_name =>'PROY_FINAL_PDFS_DIR', 
   p_src_file_name => 'proyecto-final-parte2.pdf')
 ) len_blob from dual;
+
+
+-- select * from table(dbms_cloud.list_files('PROY_FINAL_PDFS_DIR'));

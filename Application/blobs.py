@@ -33,6 +33,6 @@ def showTest():
 
 showTest()
 #uploadImage(1, "img/prueba.jpg")
-downloadImage(1, "img/disculpeProfesorCreoSaberComoCrearBBD.jpg")
+downloadImage(1, "img/disculpeProfesorCreoSaberComoCrearUnaBBD.jpg")
 
 cur.close()

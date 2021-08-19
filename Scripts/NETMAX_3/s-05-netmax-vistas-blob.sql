@@ -4,7 +4,7 @@
 --@Descripción:     Definición de vistas con columnas BLOB para netmax_s1
 
 --DOCUMENTAL 
-prompt creando vista DOCUMENTAL
+prompt Creando vista DOCUMENTAL
 create or replace view documental as
   select programa_id, tematica, duracion, 
     get_remote_trailer_f1_by_id(programa_id) as trailer, pais_id
@@ -17,7 +17,8 @@ create or replace view documental as
     get_remote_trailer_f3_by_id(programa_id) as trailer, pais_id
   from documental_f3
 ;
-select * from documental;
+prompt Probando la vista DOCUMENTAL
+select count(*) from documental;
 
 -- ARCHIVO_PROGRAMA
 prompt creando vista ARCHIVO_PROGRAMA
@@ -29,4 +30,5 @@ create or replace view archivo_programa as
   select num_archivo, programa_id, archivo, tamanio
   from archivo_programa_f2
 ;
-select * from archivo_programa;
+prompt Probando la vista PROGRAMA
+select count(*) from archivo_programa;

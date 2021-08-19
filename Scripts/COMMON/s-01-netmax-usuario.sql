@@ -35,4 +35,4 @@ grant execute on dbms_cloud_admin to netmax_bdd;
 grant execute on dbms_cloud to netmax_bdd;
 grant execute on dbms_lob to netmax_bdd;
 
-grant execute SYS.DBMS_LOB to netmax_bdd;
+prompt listo!

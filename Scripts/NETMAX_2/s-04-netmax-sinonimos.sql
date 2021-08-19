@@ -3,7 +3,6 @@
 --@Fecha creación:  16/08/2021
 --@Descripción:     Creación de sinonimos
 
---connect netmax_bdd/N3tm4x4dm1n123@jccbdd_s1
 -- USUARIO
 create or replace synonym usuario_f1 for usuario_f1_sgs_s1@netmax_s3;
 create or replace synonym usuario_f2 for usuario_f2_sgs_s2@netmax_s4;

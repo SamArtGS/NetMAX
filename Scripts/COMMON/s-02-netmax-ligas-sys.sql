@@ -16,8 +16,8 @@ begin
   -- Creación de credenciales
   dbms_cloud.create_credential(
     credential_name => 'CRED_NETMAX',
-    username => '-------------------------------------',
-    password => '---------------------'
+    username => 'jorgecrdenas@comunidad.unam.mx',
+    password => 'aSu+8sACvlt{_BGSeUj+'
   );
 
 end;

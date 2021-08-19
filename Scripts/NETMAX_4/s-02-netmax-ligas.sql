@@ -37,7 +37,8 @@ begin
   );
 end;
 /
--- Comprobación del funcionamiento de la liga
+-- Comprobacion del funcionamiento de la liga
+prompt Comprobacion del funcionamiento de la liga NETMAX_S1
 select sysdate from dual@NETMAX_S1;
 
 -- NETMAX_2 (JCCBDD_S2)
@@ -53,7 +54,8 @@ begin
   );
 end;
 /
--- Comprobación del funcionamiento de la liga
+-- Comprobacion del funcionamiento de la liga
+prompt Comprobacion del funcionamiento de la liga NETMAX_S2
 select sysdate from dual@NETMAX_S2;
 
 -- NETMAX_3 (SGSBDD_S1)
@@ -69,5 +71,6 @@ begin
   );
 end;
 /
--- Comprobación del funcionamiento de la liga
+-- Comprobacion del funcionamiento de la liga
+prompt Comprobacion del funcionamiento de la liga NETMAX_S3
 select sysdate from dual@NETMAX_S3;
