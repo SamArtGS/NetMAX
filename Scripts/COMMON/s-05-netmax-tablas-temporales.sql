@@ -81,6 +81,7 @@ create global temporary table ti_archivo_programa_1(
   num_archivo number(5,0), 
   programa_id number(10,0), 
   archivo blob not null, 
+  tamanio     number(10,2) not null,
   constraint ti_archivo_programa_1_pk primary key(num_archivo,programa_id) 
 ) on commit preserve rows;
 
