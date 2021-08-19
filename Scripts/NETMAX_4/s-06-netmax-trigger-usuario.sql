@@ -25,7 +25,7 @@ begin
             :new.ap_materno, :new.fecha_ingreso, :new.fecha_cuenta_fin, 
             :new.vigente, :new.tipo_cuenta_id);
 
-        elsif :new.tipo_cuenta_id = '1' then
+        elsif :new.tipo_cuenta_id = '2' then
           
           insert into usuario_f4(usuario_id,email,nombre,ap_paterno,
             ap_materno,fecha_ingreso, fecha_cuenta_fin, vigente, tipo_cuenta_id)
