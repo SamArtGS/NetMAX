@@ -53,18 +53,27 @@ create global temporary table ts_archivo_programa_2(
 Prompt Prompt tablas temporales para transparencia - Insert
 -- DOCUMENTAL
 create global temporary table ti_documental_1(
-  programa_id number(10,0) constraint ti_documental_1_pk primary key, 
-  trailer blob not null 
+  programa_id number(10,0) constraint ti_documental_1_pk primary key,
+  tematica varchar2(10,0)   not null,
+  duracion number(5,2)      not null,
+  trailer blob              not null,
+  pais_id number(2,0)       not null
 ) on commit preserve rows;
 
 create global temporary table ti_documental_2(
   programa_id number(10,0) constraint ti_documental_2_pk primary key, 
-  trailer blob not null 
+  tematica varchar2(10,0)   not null,
+  duracion number(5,2)      not null,
+  trailer blob              not null,
+  pais_id number(2,0)       not null
 ) on commit preserve rows;
 
 create global temporary table ti_documental_3(
   programa_id number(10,0) constraint ti_documental_3_pk primary key, 
-  trailer blob not null 
+  tematica varchar2(10,0)   not null,
+  duracion number(5,2)      not null,
+  trailer blob              not null,
+  pais_id number(2,0)       not null 
 ) on commit preserve rows;
 
 -- ARCHIVO_PROGRAMA

@@ -33,8 +33,17 @@ begin
         from programa_f1 where programa_id = :new.programa_id;
 
         if v_tipo = 'D' then
-          insert into documental_f1(programa_id,tematica,duracion,trailer,pais_id)
+
+          insert into ti_documental_1(programa_id,tematica,duracion,trailer,pais_id)
           values (:new.programa_id,:new.tematica,:new.duracion,:new.trailer,:new.pais_id);
+
+          insert into documental_1
+          select * from ti_documental_1
+          where programa_id = :new.programa_id;
+
+          delete from ti_documental_1
+          where programa_id = :new.programa_id;
+
         else
           raise_application_error(-20010,
             'Valor incorrecto para el campo padre TIPO, Debería ser tipo documental'
@@ -47,8 +56,17 @@ begin
         from programa_f1 where programa_id = :new.programa_id;
 
         if v_tipo = 'D' then
-          insert into documental_f2(programa_id,tematica,duracion,trailer,pais_id)
+
+          insert into ti_documental_2(programa_id,tematica,duracion,trailer,pais_id)
           values (:new.programa_id,:new.tematica,:new.duracion,:new.trailer,:new.pais_id);
+
+          insert into documental_2
+          select * from ti_documental_2
+          where programa_id = :new.programa_id;
+
+          delete from ti_documental_2
+          where programa_id = :new.programa_id;
+
         else
           raise_application_error(-20010,
             'Valor incorrecto para el campo padre TIPO. Debería ser tipo documental'
@@ -61,8 +79,17 @@ begin
         from programa_f1 where programa_id = :new.programa_id;
 
         if v_tipo = 'D' then
-          insert into documental_f3(programa_id,tematica,duracion,trailer,pais_id)
+
+          insert into ti_documental_3(programa_id,tematica,duracion,trailer,pais_id)
           values (:new.programa_id,:new.tematica,:new.duracion,:new.trailer,:new.pais_id);
+
+          insert into documental_3
+          select * from ti_documental3
+          where programa_id = :new.programa_id;
+
+          delete from ti_documental_3
+          where programa_id = :new.programa_id;
+
         else
           raise_application_error(-20010,
             'Valor incorrecto para el campo padre TIPO:'
@@ -112,9 +139,6 @@ begin
       end if;
 
     end case;
-  exception
-   WHEN others THEN
-   null;
   end;
 /
 show errors
