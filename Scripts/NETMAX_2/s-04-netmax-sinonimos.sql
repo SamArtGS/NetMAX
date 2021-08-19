@@ -31,7 +31,7 @@ create or replace synonym serie_f2 for serie_f2_sgs_s1@netmax_s3;
 create or replace synonym serie_f3 for serie_f3_sgs_s2@netmax_s4;
 
 -- HISTORICO_STATUS_PROGRAMA
-create or replace synonym historico_status_programa for historico_status_programa_sgs_s2@netmax_s4;
+create or replace synonym historico_status_programa_f1 for historico_status_programa_sgs_s2@netmax_s4;
 
 -- ARCHIVO_PROGRAMA
 create or replace synonym archivo_programa_f1 for archivo_programa_f1_jcc_s2;

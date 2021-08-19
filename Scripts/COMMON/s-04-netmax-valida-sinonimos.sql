@@ -47,7 +47,7 @@ from dual;
 
 -- HISTORICO_STATUS_PROGRAMA
 Prompt validando sinonimos para HISTORICO_STATUS_PROGRAMA
-select count(*) from historico_status_programa;
+select count(*) from historico_status_programa_f1;
 
 -- ARCHIVO_PROGRAMA
 Prompt validando sinonimos para ARCHIVO_PROGRAMA
