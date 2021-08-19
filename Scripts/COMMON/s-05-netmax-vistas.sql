@@ -130,4 +130,15 @@ create or replace view tipo_serie as
 prompt Probando la vista TIPO_SERIE
 select count(*) from tipo_cuenta;
 
+
+prompt creando la vista historico_status_programa
+-- tipo_serie
+create or replace view historico_status_programa as
+  select historico_status_prog_id, fecha_status, 
+  status_programa_id,programa_id
+  from historico_status_programa_f1
+;
+prompt probando la vista historico_status_programa
+select count(*) from historico_status_programa;
+
 prompt listo!
