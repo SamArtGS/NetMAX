@@ -4,7 +4,7 @@
 --@Descripción:     Archivo de carga inicial - fragmentos
 
 clear screen
-sqlerror exit rollback
+whenever sqlerror exit rollback
 
 Prompt ====================================== 
 Prompt Preparando carga de Datos 
@@ -56,6 +56,7 @@ delete from tipo_cuenta;
 
 Prompt Eliminando datos de TIPO_SERIE 
 delete from tipo_serie;
+commit;
 
 --------------------------------------------------------------------------------
 Prompt => Realizando Carga de datos .... 
