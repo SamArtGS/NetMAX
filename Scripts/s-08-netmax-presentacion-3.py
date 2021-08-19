@@ -15,7 +15,11 @@ config = {
     "tenancy": "ocid1.tenancy.oc1..aaaaaaaacn73zjt62gx6gwhqs5z5wbpidpvjs5likccvivhtfbdsl33i2tja",
     "region": "us-sanjose-1"
 }
+
 # check command line params
+# bucket-objects
+# C:\\Users\\Jorge\\Documents\\BDD\\carga-inicial\\pdfs
+# C:\\Users\\Jorge\\Documents\\BDD\\carga-inicial\\trailers
 def check_params():
     # verify input paramters
     N_PARAMS = 3 # awaited # of params
@@ -41,7 +45,7 @@ print("Validate config OK")
 
 bucket_name = sys.argv[1]
 FILE_PATH_PDFS = sys.argv[2]
-FILE_PATH_TRAILERS = sys.argv[2]
+FILE_PATH_TRAILERS = sys.argv[3]
 
 object_storage_client = ObjectStorageClient(config)
 
