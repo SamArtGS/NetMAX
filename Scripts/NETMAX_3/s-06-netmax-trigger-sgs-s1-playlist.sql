@@ -67,19 +67,19 @@ begin
 
       select count(*) into v_count_f2
       from usuario_f2
-      where usuario_id = :new.usuario_id;
+      where usuario_id = :old.usuario_id;
       
       select count(*) into v_count_f3
       from usuario_f3
-      where usuario_id = :new.usuario_id;
+      where usuario_id = :old.usuario_id;
 
       select count(*) into v_count_f4
       from usuario_f4
-      where usuario_id = :new.usuario_id;
+      where usuario_id = :old.usuario_id;
 
       select count(*) into v_count_f5
       from usuario_f5
-      where usuario_id = :new.usuario_id;
+      where usuario_id = :old.usuario_id;
     
       if v_count_f2 = 1 and v_count_f3 = 0 and v_count_f4 = 0 and v_count_f5 = 0 then
 

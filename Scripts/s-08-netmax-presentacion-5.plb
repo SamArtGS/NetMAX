@@ -1,7 +1,5 @@
 
-Prompt Seleccionar la PDB para realizar la eliminación de datos
-
-connect netmax_bdd/netmax_bdd@&pdb
+connect netmax_bdd/N3tm4x4dm1n123@jccbdd_s1
 set serveroutput on
 Prompt Eliminando datos ...
 declare
