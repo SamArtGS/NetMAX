@@ -65,15 +65,6 @@ select
   (select count(*) from playlist_f4) as playlist_f4
 from dual;
 
--- STATUS_PROGRAMA
-Prompt validando sinonimos para STATUS_PROGRAMA
-select
-  (select count(*) from status_programa_r1) as status_programa_r1,
-  (select count(*) from status_programa_r2) as status_programa_r2,
-  (select count(*) from status_programa_r3) as status_programa_r3,
-  (select count(*) from status_programa_r4) as status_programa_r4
-from dual;
-
 -- TIPO_CUENTA
 Prompt validando sinonimos para TIPO_CUENTA
 select
