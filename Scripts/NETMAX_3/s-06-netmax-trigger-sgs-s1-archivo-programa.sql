@@ -17,8 +17,16 @@ begin
 
       elsif :new.tamanio <= 10 then
         
-        insert into archivo_programa_f2(num_archivo,programa_id,archivo,tamanio)
+        insert into ti_archivo_programa_2(num_archivo,programa_id,archivo,tamanio)
         values(:new.num_archivo, :new.programa_id, :new.archivo, :new.tamanio);
+
+        insert into archivo_programa_f2
+        select * from ti_archivo_programa_2
+        where num_archivo = :new.num_archivo
+        and programa_id = :new.programa_id;
+
+        delete from ti_archivo_programa_2
+        where programa_id = :new.programa_id;
 
       else
         raise_application_error(-20010,
@@ -46,9 +54,6 @@ begin
         );
       end if;
     end case;
-  exception
-   WHEN others THEN
-   null;
   end;
 /
 show errors

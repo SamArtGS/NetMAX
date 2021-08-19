@@ -37,7 +37,7 @@ begin
           insert into ti_documental_1(programa_id,tematica,duracion,trailer,pais_id)
           values (:new.programa_id,:new.tematica,:new.duracion,:new.trailer,:new.pais_id);
 
-          insert into documental_1
+          insert into documental_f1
           select * from ti_documental_1
           where programa_id = :new.programa_id;
 
@@ -60,7 +60,7 @@ begin
           insert into ti_documental_2(programa_id,tematica,duracion,trailer,pais_id)
           values (:new.programa_id,:new.tematica,:new.duracion,:new.trailer,:new.pais_id);
 
-          insert into documental_2
+          insert into documental_f2
           select * from ti_documental_2
           where programa_id = :new.programa_id;
 
