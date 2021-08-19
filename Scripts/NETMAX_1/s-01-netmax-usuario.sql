@@ -23,11 +23,16 @@ grant create session,
   create procedure, 
   create sequence,
   create trigger,
-  create synonim, 
+  create synonym, 
   create view, 
   create materialized view,
-  create database link
+  create database link,
+  create any directory,
+  drop any directory
 to netmax_bdd; 
 -- Privilegios particulares de ORACLE CLOUD
 grant execute on dbms_cloud_admin to netmax_bdd;
 grant execute on dbms_cloud to netmax_bdd;
+grant execute on dbms_lob to netmax_bdd;
+
+grant execute SYS.DBMS_LOB to netmax_bdd;
