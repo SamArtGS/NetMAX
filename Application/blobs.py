@@ -2,7 +2,7 @@ import cx_Oracle as oracle
 import config
 
 connection = oracle.connect(
-  config.username, config.password, dsn="sgsbdd_s1", encoding="UTF-8"
+  config.username, config.password, dsn="jccbdd_s1", encoding="UTF-8"
 )
 cur = connection.cursor()
 
@@ -11,14 +11,14 @@ inst_blob = """
   values(:1, :2, :3, :4)
 """
 qry_blob = """
-  select archivo from archivo_programa 
+  select archivo from archivo_programa
   where num_archivo = :1 and programa_id = :2
 """
 
 def uploadImage(id, image_path):
   with open(image_path, 'rb') as f:
     img_data = f.read()
-    cur.execute(inst_blob, (1, 1, img_data, f.tell()))
+    cur.execute(inst_blob, (1, 1, img_data, f.tell()/(1024*1024)))
     connection.commit()
 
 def downloadImage(id, image_path):
@@ -28,11 +28,11 @@ def downloadImage(id, image_path):
      f.write(foto.read())
 
 def showTest():
-  for row in cur.execute("select * from archivo_programa"):
+  for row in cur.execute(qry_blob, (1, 1)):
     print(row)
 
 showTest()
 #uploadImage(1, "img/prueba.jpg")
-downloadImage(1, "img/disculpeProfesorCreoSaberComoCrearUnaBBD.jpg")
+#downloadImage(1, "img/YSinSusTontasFunciones.jpg")
 
 cur.close()

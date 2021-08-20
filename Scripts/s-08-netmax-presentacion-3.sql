@@ -86,8 +86,8 @@ Prompt Cargando HISTORICO_STATUS_PROGRAMA
 @carga-inicial/netmax-carga-inicial-historico-status-prog.sql
 
 Prompt Cargando DOCUMENTAL (con datos BLOB) 
-@carga-inicial/netmax-carga-inicial-documental-empty-blob.sql 
---@carga-inicial/netmax-carga-inicial-documental.sql
+--@carga-inicial/netmax-carga-inicial-documental-empty-blob.sql 
+@carga-inicial/netmax-carga-inicial-documental.sql
 
 Prompt Cargando SERIE 
 @carga-inicial/netmax-carga-inicial-serie.sql 
@@ -99,8 +99,8 @@ Prompt Cargando PLAYLIST
 @carga-inicial/netmax-carga-inicial-playlist.sql
 
 Prompt cargando ARCHIVO_PROGRAMA (con datos BLOB) 
---@carga-inicial/netmax-carga-inicial-archivo-programa.sql 
-@carga-inicial/netmax-carga-inicial-archivo-programa-empty-blob.sql
+@carga-inicial/netmax-carga-inicial-archivo-programa.sql 
+--@carga-inicial/netmax-carga-inicial-archivo-programa-empty-blob.sql
 
 Prompt Carga de datos replicados exitosa, haciendo commit!.
 commit;
