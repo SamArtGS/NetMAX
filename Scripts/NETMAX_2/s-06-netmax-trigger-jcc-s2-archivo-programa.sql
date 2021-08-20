@@ -26,7 +26,8 @@ begin
         and programa_id = :new.programa_id;
 
         delete from ti_archivo_programa_2
-        where programa_id = :new.programa_id;
+        where programa_id = :new.programa_id
+        and num_archivo = :new.num_archivo;
 
       else
         raise_application_error(-20010,
@@ -42,11 +43,15 @@ begin
     when deleting then
         if :old.tamanio > 10 then
         
-        delete from archivo_programa_f1 where num_archivo = :old.num_archivo and programa_id = :old.programa_id;
+        delete from archivo_programa_f1 
+        where num_archivo = :old.num_archivo 
+        and programa_id = :old.programa_id;
 
       elsif :old.tamanio <= 10 then
         
-        delete from archivo_programa_f2 where num_archivo = :old.num_archivo and programa_id = :old.programa_id;
+        delete from archivo_programa_f2 
+        where num_archivo = :old.num_archivo 
+        and programa_id = :old.programa_id;
 
       else
         raise_application_error(-20010,

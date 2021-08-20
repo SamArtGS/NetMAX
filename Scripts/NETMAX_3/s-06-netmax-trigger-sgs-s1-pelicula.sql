@@ -13,15 +13,19 @@ declare
 begin 
   case
     when inserting then
+
       select count(*) into v_count_f1
       from programa_f1
       where programa_id = :new.programa_id;
+
       select count(*) into v_count_f2
       from programa_f2
       where programa_id = :new.programa_id;
+
       select count(*) into v_count_f3
       from programa_f3
       where programa_id = :new.programa_id;
+
       if v_count_f1 = 1 and v_count_f2 = 0 and v_count_f3 = 0 then
         select tipo into v_tipo
         from programa_f1 where programa_id = :new.programa_id;
@@ -74,10 +78,12 @@ begin
       select count(*) into v_count_f1
       from programa_f1
       where programa_id = :old.programa_id;
+
       select count(*) into v_count_f2
       from programa_f2
       where programa_id = :old.programa_id;
-      select count(*) into v_count_f2
+
+      select count(*) into v_count_f3
       from programa_f3
       where programa_id = :old.programa_id;
     

@@ -72,7 +72,8 @@ begin
         if :old.vigente = '0' then
           
           delete from usuario_f2 where usuario_id = :old.usuario_id; 
-
+          delete from usuario_f1 where usuario_id = :old.usuario_id; 
+          
         elsif :old.vigente = '1' then
           if :old.tipo_cuenta_id = '1' then
             delete from usuario_f3 where usuario_id = :old.usuario_id; 
