@@ -21,7 +21,8 @@ begin
         and programa_id = :new.programa_id;
 
         delete from ti_archivo_programa_1
-        where programa_id = :new.programa_id;
+        where programa_id = :new.programa_id
+        and programa_id = :new.programa_id;
 
       elsif :new.tamanio <= 10 then
         
@@ -34,12 +35,13 @@ begin
         and programa_id = :new.programa_id;
 
         delete from ti_archivo_programa_2
-        where programa_id = :new.programa_id;
+        where programa_id = :new.programa_id
+        and programa_id = :new.programa_id;
 
       else
-        raise_application_error(-20010,
+      raise_application_error(-20010,
           'Valor incorrecto para el campo TAMANIO:'
-        );
+      );
       end if;
 
     when updating then
@@ -50,11 +52,15 @@ begin
     when deleting then
         if :old.tamanio > 10 then
         
-        delete from archivo_programa_f1 where num_archivo = :old.num_archivo and programa_id = :old.programa_id;
+        delete from archivo_programa_f1 
+        where num_archivo = :old.num_archivo 
+        and programa_id = :old.programa_id;
 
       elsif :old.tamanio <= 10 then
         
-        delete from archivo_programa_f2 where num_archivo = :old.num_archivo and programa_id = :old.programa_id;
+        delete from archivo_programa_f2 
+        where num_archivo = :old.num_archivo 
+        and programa_id = :old.programa_id;
 
       else
         raise_application_error(-20010,
@@ -63,6 +69,5 @@ begin
       end if;
     end case;
   end;
-
 /
 show errors

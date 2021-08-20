@@ -53,8 +53,8 @@ begin
           values (:new.playlist_id,:new.calificacion,:new.indice,:new.num_reproducciones,:new.programa_id,:new.usuario_id);
 
       else
-        raise_application_error(-20020,
-            'Valor incorrecto para el campo combinacione de letras desde AA hasta ZZ'
+        raise_application_error(-20010,
+            'Valor incorrecto para el campo combinaciones'
         );
       end if;
 
@@ -98,8 +98,8 @@ begin
         delete from playlist_f4 where playlist_id = :old.playlist_id;
         
       else
-        raise_application_error(-20020,
-            'Valor incorrecto para el campo combinacione de letras desde AA hasta ZZ'
+        raise_application_error(-20010,
+            'Valor incorrecto fragmento'
         );
       end if;
 

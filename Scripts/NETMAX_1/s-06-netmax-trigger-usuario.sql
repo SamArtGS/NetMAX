@@ -16,8 +16,8 @@ begin
       values(:new.usuario_id, :new.email, :new.nombre, :new.ap_paterno,
       :new.ap_materno, :new.fecha_ingreso, :new.fecha_cuenta_fin, :new.vigente, :new.tipo_cuenta_id);
       -- INSERCIÓN DE PASSWORD Y TARJETA EN NODO 1
-        insert into usuario_f1(usuario_id,num_tarjeta,password)
-        values(:new.usuario_id, :new.num_tarjeta, :new.password);
+      insert into usuario_f1(usuario_id,num_tarjeta,password)
+      values(:new.usuario_id, :new.num_tarjeta, :new.password);
         
       elsif :new.vigente = '1' then
         if :new.tipo_cuenta_id = '1' then
@@ -72,7 +72,8 @@ begin
         if :old.vigente = '0' then
           
           delete from usuario_f2 where usuario_id = :old.usuario_id; 
-
+          delete from usuario_f1 where usuario_id = :old.usuario_id; 
+          
         elsif :old.vigente = '1' then
           if :old.tipo_cuenta_id = '1' then
             delete from usuario_f3 where usuario_id = :old.usuario_id; 

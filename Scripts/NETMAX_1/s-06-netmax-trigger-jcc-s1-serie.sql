@@ -40,7 +40,7 @@ begin
         
         else
           raise_application_error(-20010,
-            'Valor incorrecto para el campo padre'
+            'Valor incorrecto para el TIPO'
           );
         end if;
 
@@ -58,7 +58,7 @@ begin
 
         else
           raise_application_error(-20010,
-            'Valor incorrecto para el campo pad'
+            'Valor incorrecto para el TIPO'
           );
         end if;
 
@@ -74,13 +74,13 @@ begin
           :new.tipo_serie_id);
         else
           raise_application_error(-20010,
-            'Valor incorrecto para el cam'
+            'Valor incorrecto para el TIPO'
           );
         end if;
 
       else
         raise_application_error(-20020,
-            'Valor incorrecto para el campo FOLIO: ');
+            'Valor incorrecto para fragmento');
       end if;
 
     when updating then
@@ -116,7 +116,7 @@ begin
 
       else
         raise_application_error(-20020,
-            'Valor incorrecto para el campo '
+            'Valor incorrecto para la fragmentación'
         );
       end if;
 
