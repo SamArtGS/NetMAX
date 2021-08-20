@@ -1,0 +1,492 @@
+idle> @s-08-netmax-presentacion-3.sql
+======================================
+Preparando carga de Datos
+======================================
+Connected.
+Personalizando el formato de fechas
+
+Session altered.
+
+==================================================
+¿ Listo para Iniciar con la carga ?
+==================================================
+=> Presionar Enter para Iniciar, Ctrl-C para cancelar
+
+=> Realizando limpieza inicial ....
+Eliminando datos de PLAYLIST
+Eliminando datos de USUARIO
+Eliminando datos de SERIE
+Eliminando datos de PELICULA
+Eliminando datos de DOCUMENTAL
+Eliminando datos de HISTORICO
+Eliminando datos de ARCHIVO_PROGRAMA
+Eliminando datos de PROGRAMA
+Eliminando datos de PAIS
+Eliminando datos de TIPO_CUENTA
+Eliminando datos de TIPO_SERIE
+=> Realizando Carga de datos ....
+Cargando PAIS
+Cargando TIPO_SERIE
+Cargando TIPO_CUENTA
+Cargando USUARIO
+Cargando PROGRAMA (DOCUMENTAL)
+Cargando PROGRAMA (PELICULA)
+Cargando PROGRAMA (SERIE)
+Cargando HISTORICO_STATUS_PROGRAMA
+Cargando DOCUMENTAL (con datos BLOB)
+Cargando SERIE
+Cargando PELICULA
+Cargando PLAYLIST
+cargando ARCHIVO_PROGRAMA (con datos BLOB)
+Carga de datos replicados exitosa, haciendo commit!.
+Disconnected from Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.12.0.1.0
+[opc@jccbdd Scripts]$ sqlplus /nolog
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Fri Aug 20 03:55:33 2021
+Version 21.1.0.0.0
+
+Copyright (c) 1982, 2020, Oracle.  All rights reserved.
+
+idle> @s-08-netmax-presentacion-4.plb
+Connected.
+Indicar la Tecnica para fragmentar playlist:
+(P) empleando PROGRAMA, (U) empleando USUARIO: U
+Personalizando el formato de fechas
+
+Session altered.
+
+Creando procedimientos para validar
+
+Procedure created.
+
+No errors.
+
+Procedure created.
+
+No errors.
+
+Procedure created.
+
+No errors.
+
+Procedure created.
+
+No errors.
+
+Procedure created.
+
+No errors.
+
+Procedure created.
+
+No errors.
+
+Procedure created.
+
+No errors.
+
+Procedure created.
+
+No errors.
+
+Procedure created.
+
+No errors.
+
+Procedure created.
+
+No errors.
+
+Procedure created.
+
+No errors.
+=> Personalizando el formato de fechas
+
+Session altered.
+
+======================================
+Validando nombres de tablas
+======================================
+===>  OK, validacion de tablas globales
+======================================
+Validando inserciones
+======================================
+===> OK, 0099 Registros en pais_r1
+===> OK, 0099 Registros en pais_r2
+===> OK, 0099 Registros en pais_r3
+===> OK, 0099 Registros en pais_r4
+===> OK, 0003 Registros en tipo_cuenta_r1
+===> OK, 0003 Registros en tipo_cuenta_r2
+===> OK, 0003 Registros en tipo_cuenta_r3
+===> OK, 0003 Registros en tipo_cuenta_r4
+===> OK, 0020 Registros en tipo_serie_r1
+===> OK, 0020 Registros en tipo_serie_r2
+===> OK, 0020 Registros en tipo_serie_r3
+===> OK, 0020 Registros en tipo_serie_r4
+===> OK, 0263 Registros en usuario_f3
+===> OK, 0258 Registros en usuario_f4
+===> OK, 0300 Registros en usuario_f5
+===> OK, 0179 Registros en usuario_f2
+===> OK, 1000 Registros en usuario_f1
+===> OK, 1000 Registros en usuario
+===> OK, 1514 Registros en programa_f1
+===> OK, 0870 Registros en programa_f2
+===> OK, 0616 Registros en programa_f3
+===> OK, 3000 Registros en programa
+===> OK, 0529 Registros en documental_f1
+===> OK, 0266 Registros en documental_f2
+===> OK, 0205 Registros en documental_f3
+===> OK, 1000 Registros en documental
+===> OK, 0499 Registros en pelicula_f1
+===> OK, 0293 Registros en pelicula_f2
+===> OK, 0208 Registros en pelicula_f3
+===> OK, 1000 Registros en pelicula
+===> OK, 0486 Registros en serie_f1
+===> OK, 0311 Registros en serie_f2
+===> OK, 0203 Registros en serie_f3
+===> OK, 1000 Registros en serie
+===> OK, 1000 Registros en historico_status_programa_f1
+===> OK, 1000 Registros en historico_status_programa
+===> OK, 0525 Registros en archivo_programa_f2
+===> OK, 0475 Registros en archivo_programa_f1
+===> OK, 1000 Registros en archivo_programa
+===> OK, 0249 Registros en playlist_f2
+===> OK, 0257 Registros en playlist_f3
+===> OK, 0321 Registros en playlist_f4
+===> OK, 0173 Registros en playlist_f1
+===> OK, 1000 Registros en playlist
+======================================
+Validando Registros con datos BLOB
+======================================
+===> OK,1000 Registros en archivo_programa con Datos BLOB.
+===> OK,1000 Registros en documental con Datos BLOB.
+======================================
+Validando registros con datos invalidos
+======================================
+===> OK, registro no valido fue rechazado para PAIS con vigente = 5
+===> OK, registro no valido fue rechazado para PAIS con tipo_cuenta_id = 50
+===> OK, registro no valido fue rechazado para PROGRAMA con folio #####
+===> OK, registro no valido fue rechazado para DOCUMENTAL con programa_id inexistente 5001
+===> OK, registro no valido fue rechazado para PELICULA con programa_id inexistente 6001
+===> OK, registro no valido fue rechazado para SERIE con programa_id inexistente 7001
+======================================
+Validando Replicacion de tablas
+======================================
+===> OK, Replica PAIS funcionando correctamente
+===> OK, Replica TIPO_SERIE funcionando correctamente
+===> OK, Replica TIPO_CUENTA funcionando correctamente
+c9a78b1993f1c7323ba65b9b18845fcde417dff523ee145c373e0d94f67f51fa  s-08-netmax-presentacion-4.plb
+
+Listo!
+Disconnected from Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.12.0.1.0
+[opc@jccbdd Scripts]$ sqlplus /nolog
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Fri Aug 20 03:55:59 2021
+Version 21.1.0.0.0
+
+Copyright (c) 1982, 2020, Oracle.  All rights reserved.
+
+idle> @s-08-netmax-presentacion-5.plb
+Connected.
+Eliminando datos ...
+021-08-20 03:56:02 Eliminando datos de playlist
+021-08-20 03:56:10 Eliminando datos de usuario
+021-08-20 03:56:13 Eliminando datos de  serie
+021-08-20 03:56:18 Eliminando datos de pelicula
+021-08-20 03:56:22 Eliminando datos de documental
+021-08-20 03:56:28 Eliminando datos de historico
+021-08-20 03:56:28 Eliminando datos de archivo_programa
+021-08-20 03:56:31 Eliminando datos de programa
+021-08-20 03:56:33 Eliminando datos de pais
+021-08-20 03:56:34 Eliminando datos de tipo_serie
+021-08-20 03:56:34 Eliminando datos de tipo_cuenta
+021-08-20 03:56:34 Elimimacion concluida, haciendo commit
+
+PL/SQL procedure successfully completed.
+
+Listo!
+Disconnected from Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.12.0.1.0
+[opc@jccbdd Scripts]$ sqlplus /nolog
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Fri Aug 20 03:56:41 2021
+Version 21.1.0.0.0
+
+Copyright (c) 1982, 2020, Oracle.  All rights reserved.
+
+idle> @s-08-netmax-presentacion-6.plb
+======================================
+validando transparencia de eliminacion
+======================================
+seleciconar la PDB para validar
+Enter value for pdb: jccbdd_s1
+Connected.
+
+Procedure created.
+
+No errors.
+validando registros eliminados ...
+0 registros para playlist_f1
+0 registros para playlist_f2
+0 registros para playlist_f3
+0 registros para playlist
+0 registros para usuario_f1
+0 registros para usuario_f2
+0 registros para usuario_f3
+0 registros para usuario_f4
+0 registros para usuario_f5
+0 registros para usuario
+0 registros para archivo_programa_f1
+0 registros para archivo_programa_f2
+0 registros para archivo_programa
+0 registros para historico_status_programa_f1
+0 registros para historico_status_programa
+0 registros para documental_f1
+0 registros para documental_f2
+0 registros para documental_f3
+0 registros para documental
+0 registros para pelicula_f1
+0 registros para pelicula_f2
+0 registros para pelicula_f3
+0 registros para pelicula
+0 registros para serie_f1
+0 registros para serie_f2
+0 registros para serie_f3
+0 registros para serie
+0 registros para programa_f1
+0 registros para programa_f2
+0 registros para programa_f3
+0 registros para programa
+0 registros para pais_r1
+0 registros para pais_r2
+0 registros para pais_r3
+0 registros para pais_r4
+0 registros para tipo_serie_r1
+0 registros para tipo_serie_r2
+0 registros para tipo_serie_r3
+0 registros para tipo_serie_r4
+0 registros para tipo_cuenta_r1
+0 registros para tipo_cuenta_r2
+0 registros para tipo_cuenta_r3
+0 registros para tipo_cuenta_r4
+
+PL/SQL procedure successfully completed.
+
+c9a78b1993f1c7323ba65b9b18845fcde417dff523ee145c373e0d94f67f51fa  s-08-netmax-presentacion-4.plb
+
+Listo!
+Disconnected from Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.12.0.1.0
+[opc@jccbdd Scripts]$ sqlplus /nolog
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Fri Aug 20 03:57:10 2021
+Version 21.1.0.0.0
+
+Copyright (c) 1982, 2020, Oracle.  All rights reserved.
+
+idle> @s-08-netmax-presentacion-6.plb
+======================================
+validando transparencia de eliminacion
+======================================
+seleciconar la PDB para validar
+Enter value for pdb: jccbdd_s2
+Connected.
+
+Procedure created.
+
+No errors.
+validando registros eliminados ...
+0 registros para playlist_f1
+0 registros para playlist_f2
+0 registros para playlist_f3
+0 registros para playlist
+0 registros para usuario_f1
+0 registros para usuario_f2
+0 registros para usuario_f3
+0 registros para usuario_f4
+0 registros para usuario_f5
+0 registros para usuario
+0 registros para archivo_programa_f1
+0 registros para archivo_programa_f2
+0 registros para archivo_programa
+0 registros para historico_status_programa_f1
+0 registros para historico_status_programa
+0 registros para documental_f1
+0 registros para documental_f2
+0 registros para documental_f3
+0 registros para documental
+0 registros para pelicula_f1
+0 registros para pelicula_f2
+0 registros para pelicula_f3
+0 registros para pelicula
+0 registros para serie_f1
+0 registros para serie_f2
+0 registros para serie_f3
+0 registros para serie
+0 registros para programa_f1
+0 registros para programa_f2
+0 registros para programa_f3
+0 registros para programa
+0 registros para pais_r1
+0 registros para pais_r2
+0 registros para pais_r3
+0 registros para pais_r4
+0 registros para tipo_serie_r1
+0 registros para tipo_serie_r2
+0 registros para tipo_serie_r3
+0 registros para tipo_serie_r4
+0 registros para tipo_cuenta_r1
+0 registros para tipo_cuenta_r2
+0 registros para tipo_cuenta_r3
+0 registros para tipo_cuenta_r4
+
+PL/SQL procedure successfully completed.
+
+c9a78b1993f1c7323ba65b9b18845fcde417dff523ee145c373e0d94f67f51fa  s-08-netmax-presentacion-4.plb
+
+Listo!
+Disconnected from Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.12.0.1.0
+[opc@jccbdd Scripts]$ sqlplus /nolog
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Fri Aug 20 03:57:20 2021
+Version 21.1.0.0.0
+
+Copyright (c) 1982, 2020, Oracle.  All rights reserved.
+
+idle> @s-08-netmax-presentacion-6.plb
+======================================
+validando transparencia de eliminacion
+======================================
+seleciconar la PDB para validar
+Enter value for pdb: sgsbdd_s1
+Connected.
+
+Procedure created.
+
+No errors.
+validando registros eliminados ...
+0 registros para playlist_f1
+0 registros para playlist_f2
+0 registros para playlist_f3
+0 registros para playlist
+0 registros para usuario_f1
+0 registros para usuario_f2
+0 registros para usuario_f3
+0 registros para usuario_f4
+0 registros para usuario_f5
+0 registros para usuario
+0 registros para archivo_programa_f1
+0 registros para archivo_programa_f2
+0 registros para archivo_programa
+0 registros para historico_status_programa_f1
+0 registros para historico_status_programa
+0 registros para documental_f1
+0 registros para documental_f2
+0 registros para documental_f3
+0 registros para documental
+0 registros para pelicula_f1
+0 registros para pelicula_f2
+0 registros para pelicula_f3
+0 registros para pelicula
+0 registros para serie_f1
+0 registros para serie_f2
+0 registros para serie_f3
+0 registros para serie
+0 registros para programa_f1
+0 registros para programa_f2
+0 registros para programa_f3
+0 registros para programa
+0 registros para pais_r1
+0 registros para pais_r2
+0 registros para pais_r3
+0 registros para pais_r4
+0 registros para tipo_serie_r1
+0 registros para tipo_serie_r2
+0 registros para tipo_serie_r3
+0 registros para tipo_serie_r4
+0 registros para tipo_cuenta_r1
+0 registros para tipo_cuenta_r2
+0 registros para tipo_cuenta_r3
+0 registros para tipo_cuenta_r4
+
+PL/SQL procedure successfully completed.
+
+c9a78b1993f1c7323ba65b9b18845fcde417dff523ee145c373e0d94f67f51fa  s-08-netmax-presentacion-4.plb
+
+Listo!
+Disconnected from Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.12.0.1.0
+[opc@jccbdd Scripts]$ sqlplus /nolog
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Fri Aug 20 03:57:42 2021
+Version 21.1.0.0.0
+
+Copyright (c) 1982, 2020, Oracle.  All rights reserved.
+
+idle> @s-08-netmax-presentacion-6.plb
+======================================
+validando transparencia de eliminacion
+======================================
+seleciconar la PDB para validar
+Enter value for pdb: sgsbdd_s2
+Connected.
+
+Procedure created.
+
+No errors.
+validando registros eliminados ...
+0 registros para playlist_f1
+0 registros para playlist_f2
+0 registros para playlist_f3
+0 registros para playlist
+0 registros para usuario_f1
+0 registros para usuario_f2
+0 registros para usuario_f3
+0 registros para usuario_f4
+0 registros para usuario_f5
+0 registros para usuario
+0 registros para archivo_programa_f1
+0 registros para archivo_programa_f2
+0 registros para archivo_programa
+0 registros para historico_status_programa_f1
+0 registros para historico_status_programa
+0 registros para documental_f1
+0 registros para documental_f2
+0 registros para documental_f3
+0 registros para documental
+0 registros para pelicula_f1
+0 registros para pelicula_f2
+0 registros para pelicula_f3
+0 registros para pelicula
+0 registros para serie_f1
+0 registros para serie_f2
+0 registros para serie_f3
+0 registros para serie
+0 registros para programa_f1
+0 registros para programa_f2
+0 registros para programa_f3
+0 registros para programa
+0 registros para pais_r1
+0 registros para pais_r2
+0 registros para pais_r3
+0 registros para pais_r4
+0 registros para tipo_serie_r1
+0 registros para tipo_serie_r2
+0 registros para tipo_serie_r3
+0 registros para tipo_serie_r4
+0 registros para tipo_cuenta_r1
+0 registros para tipo_cuenta_r2
+0 registros para tipo_cuenta_r3
+0 registros para tipo_cuenta_r4
+
+PL/SQL procedure successfully completed.
+
+c9a78b1993f1c7323ba65b9b18845fcde417dff523ee145c373e0d94f67f51fa  s-08-netmax-presentacion-4.plb
+
+Listo!
+Disconnected from Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.12.0.1.0
+[opc@jccbdd Scripts]$
