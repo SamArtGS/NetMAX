@@ -52,3 +52,37 @@
 | TIPO_SERIE_R_JCC_S2 | Tabla Replicada |
 | TIPO_SERIE_R_SGS_S1 | Tabla Replicada |
 | TIPO_SERIE_R_SGS_S2 | Tabla Replicada |
+
+
+## Diagrama relacional original (sin fragmentos)
+
+![](img/NETMAX_LOGICO_ORIGINAL.png)
+
+## Diagrama relacional con fragmentos
+
+![](img/NETMAX_LOGICO_TOTAL.jpg)
+
+
+## Diagramas relacionales por nodo
+
+### Diagrama de JCCBDD_S1
+
+![](img/NETMAX_LOGICO_F1.jpg)
+
+### Diagrama de JCCBDD_S2
+
+![](img/NETMAX_LOGICO_F2.jpg)
+
+### Diagrama de SGSBDD_S1
+
+![](img/NETMAX_LOGICO_F3.jpg)
+
+### Diagrama de SGSBDD_S2
+
+![](img/NETMAX_LOGICO_F4.jpg)
+
+## RESTRICCIONES DE INTEGRIDAD QUE SE CONSERVAN
+
+| SITIO | Nombre del fragmento/Tabla Padre | Nombre del fragmento/Tabla Hijo |
+|:--:|:--:|:--:|
+|    |            |
