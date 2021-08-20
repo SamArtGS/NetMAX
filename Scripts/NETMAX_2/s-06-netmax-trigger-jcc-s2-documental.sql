@@ -53,7 +53,7 @@ begin
       elsif v_count_f1 = 0 and v_count_f2 = 1 and v_count_f3 = 0 then
 
         select tipo into v_tipo
-        from programa_f1 where programa_id = :new.programa_id;
+        from programa_f2 where programa_id = :new.programa_id;
 
         if v_tipo = 'D' then
 
@@ -76,7 +76,7 @@ begin
       elsif v_count_f1 = 0 and v_count_f2 = 0 and v_count_f3 = 1 then
 
         select tipo into v_tipo
-        from programa_f1 where programa_id = :new.programa_id;
+        from programa_f3 where programa_id = :new.programa_id;
 
         if v_tipo = 'D' then
 
