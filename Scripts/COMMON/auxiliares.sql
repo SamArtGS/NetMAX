@@ -1,6 +1,7 @@
 
 
 
+conn admin
 BEGIN
   FOR r IN (select sid,serial# from v$session where not audsid = Sys_Context('USERENV', 'SESSIONID'))
   LOOP
