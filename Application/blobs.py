@@ -2,12 +2,12 @@ import cx_Oracle as oracle
 import config
 
 connection = oracle.connect(
-  config.username, config.password, dsn="jccbdd_s1", encoding="UTF-8"
+  config.username, config.password, dsn="sgsbdd_s1", encoding="UTF-8"
 )
 cur = connection.cursor()
 
 inst_blob = """
-  insert into archivo_programa_f2(num_archivo, programa_id, archivo, tamanio) 
+  insert into archivo_programa(num_archivo, programa_id, archivo, tamanio) 
   values(:1, :2, :3, :4)
 """
 qry_blob = """
@@ -32,7 +32,7 @@ def showTest():
     print(row)
 
 showTest()
-#uploadImage(1, "img/prueba.jpg")
+uploadImage(1, "img/disculpeProfesorCreoSaberComoCrearUnaBBD.jpg")
 #downloadImage(1, "img/YSinSusTontasFunciones.jpg")
 
 cur.close()
